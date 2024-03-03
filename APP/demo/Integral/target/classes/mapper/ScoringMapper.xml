@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.example.mapper.ScoringMapper">
+
+
+    <select id="selectScoringAll" resultType="org.example.po.ScoringPo">
+        select * from scoring
+    </select>
+
+    <!-- 新增积分 -->
+    <insert id="insertScoring" parameterType="org.example.po.ScoringPo">
+        INSERT INTO scoring (pid, amount)
+        VALUES (#{pid}, #{amount})
+    </insert>
+</mapper>
